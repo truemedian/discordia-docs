@@ -1,0 +1,76 @@
+name: Publish Documentation
+
+on: 
+  push:
+    branches:
+      - master
+    paths:
+    - '**.html'
+    - '**.css'
+    - '**.yml'
+    - '**.md'
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Template
+        uses: actions/checkout@master
+        with:
+          path: www
+
+      - name: Checkout Discordia
+        uses: actions/checkout@master
+        with:
+          repository: truemedian/Discordia
+          ref: dev-documentation
+          path: discordia
+
+      - name: Setup Ruby
+        uses: actions/setup-ruby@v1
+
+      - name: Setup Luvit
+        run: curl -L https://github.com/luvit/lit/raw/master/get-lit.sh | sh
+
+      - name: Run Generator
+        run: |
+          ./luvit ./discordia/docgen.lua ./discordia/libs ./www/src
+
+      - name: Setup Site
+        working-directory: www
+        run: |
+          git init _site
+
+          cd _site
+
+          git remote add origin https://github.com/${{ github.repository }}
+          git checkout --orphan docs
+
+      - name: Setup Jekyll
+        working-directory: www
+        run: |
+          gem install bundler
+          bundle install
+
+          jekyll build
+
+      - name: Commit Changes
+        working-directory: www/_site
+        run: |
+          git add .
+
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -am "Publish Documentation"
+ 
+      - name: Publish
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: docs
+          force: true
+          directory: www/_site

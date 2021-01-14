@@ -1,0 +1,47 @@
+---
+permalink: /Enumerations
+title: Enumerations
+
+layout: default
+---
+
+<h1>Enumerations</h1>
+
+<div class="table-of-contents">
+    {% for enum in site.data.enumerations %}
+
+    <a class="anchor" style="width: {{ site.data.enumerations | calculate_toc_width }}em" href="#{{ enum.name | slugify }}">{{ enum.name }}</a>
+
+    {% endfor %}
+</div>
+
+<div class="enumerations">
+    {% for enum in site.data.enumerations %}
+
+    <hr>
+
+    <div id="{{ enum.name | slugify }}">
+        <h3 class="name">
+            <a class="anchor" href="#{{ enum.name | slugify }}">{{ enum.name }}</a>
+        </h3>
+
+        <table class="enumerations">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for field in enum.values %}
+                <tr>
+                    <td>{{ field.name }}</td>
+                    <td>{{ field.value }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% endfor %}
+</div>

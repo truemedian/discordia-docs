@@ -1,0 +1,18 @@
+source: src
+
+strict_front_matter: true
+disable_disk_cache: true
+
+minify_html: true
+
+includes_dir: .jekyll/includes
+layouts_dir: .jekyll/layouts
+data_dir: .jekyll/data
+
+plugins_dir: plugins
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

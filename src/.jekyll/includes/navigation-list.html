@@ -1,0 +1,10 @@
+<li><a href="/class/{{ navitem.name }}">{{ navitem.name }}</a>
+{% if navitem.children %}
+<ul>
+    {% for child in navitem.children %}
+    {% assign navitem = child %}
+    {% include navigation-list.html %}
+    {% endfor %}
+</ul>
+{% endif %}
+</li>

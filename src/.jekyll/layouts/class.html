@@ -1,0 +1,200 @@
+---
+layout: default
+---
+
+{% assign data = site.data.classes[page.class_name] %}
+
+<div class="class-content">
+    <h1 class="name">{{ page.class_name }}</h1>
+
+    <p class="description">{{ data.description | markdownify }}</p>
+    
+    {% if data.constructor %}
+    <h2>Constructor</h2>
+    <div class="constructor method">
+        <h3 class="name" id="{{ page.class_name | slugify }}">
+            <a class="anchor" href="#{{ page.class_name | slugify }}">{{ page.class_name }}({{ data.constructor.params.simple | join: ", "}})</a>
+        </h3>
+        
+        <table class="parameters">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Type</th>
+                    {% if data.constructor.params.has_optional %}
+                    <th>Optional</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for param in data.constructor.params.list %}
+                <tr>
+                    <td>{{ param.name }}</td>
+                    <td>{{ param.types | list_link_rel | array_to_sentence_string: "or" }}</td>
+                    {% if data.constructor.params.has_optional %}
+                    {% if param.optional %}
+                    <td>Yes</td>
+                    {% else %}
+                    <td></td>
+                    {% endif %}
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p class="description">{{ data.constructor.description | markdownify }}</p>
+    </div>
+    {% endif %}
+
+    {% for props in data.properties %}
+    {% if props.from %}
+    <h2>Properties Inherited from {{ props.from }}</h2>
+    {% else %}
+    <h2>Properties</h2>
+    {% endif %}
+
+    <table class="properties">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in props.list %}
+            <tr>
+                <td>{{ p.name }}</td>
+                <td>{{ p.types | list_link_rel | array_to_sentence_string: "or" }}</td>
+                <td>{{ p.description | markdownify }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endfor %}
+
+    {% for statics in data.statics %}
+    {% if statics.from %}
+    <h2>Static Methods Inherited from {{ statics.from }}</h2>
+    {% else %}
+    <h2>Static Methods</h2>
+    {% endif %}
+
+    <div class="table-of-contents">
+        {% for method in statics.list %}
+
+        <a class="anchor" style="width: {{ statics.list | calculate_toc_width }}em" href="#{{ method.name | slugify }}">{{ method.name }}</a>
+
+        {% endfor %}
+    </div>
+    
+    <hr>
+    
+    {% for method in statics.list %}
+    <div class="method">
+        <h3 class="name" id="{{ method.name | slugify }}">
+            <a class="anchor" href="#{{ method.name | slugify }}">{{ method.name }}({{ method.params.simple | join: ", "}})</a>
+        </h3>
+        
+        <table class="parameters">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Type</th>
+                    {% if method.params.has_optional %}
+                    <th>Optional</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for param in method.params.list %}
+                <tr>
+                    <td>{{ param.name }}</td>
+                    <td>{{ param.types | list_link_rel | array_to_sentence_string: "or" }}</td>
+                    {% if method.params.has_optional %}
+                    {% if param.optional %}
+                    <td>✔</td>
+                    {% else %}
+                    <td></td>
+                    {% endif %}
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p class="description">{{ method.description | markdownify }}</p>
+        <p class="returns">
+            <strong>Returns: </strong>
+            {{ method.returns | list_link_rel | join: ", " }}
+        </p>
+    </div>
+
+    <hr>
+    {% endfor %}
+    {% endfor %}
+
+    {% for methods in data.methods %}
+    {% if methods.from %}
+    <h2>Methods Inherited from {{ methods.from }}</h2>
+    {% else %}
+    <h2>Methods</h2>
+    {% endif %}
+
+    <div class="table-of-contents">
+        {% for method in methods.list %}
+
+        <a class="anchor" style="width: {{ methods.list | calculate_toc_width }}em" href="#{{ method.name | slugify }}">{{ method.name }}</a>
+
+        {% endfor %}
+    </div>
+
+    <hr>
+    
+    {% for method in methods.list %}
+    <div class="method">
+        <h3 class="name" id="{{ method.name | slugify }}">
+            <a class="anchor" href="#{{ method.name | slugify }}">{{ method.name }}({{ method.params.simple | join: ", "}})</a>
+        </h3>
+        
+        {% if method.params.list != empty %}
+        <table class="parameters">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Type</th>
+                    {% if method.params.has_optional %}
+                    <th>Optional</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for param in method.params.list %}
+                <tr>
+                    <td>{{ param.name }}</td>
+                    <td>{{ param.types | list_link_rel | array_to_sentence_string: "or" }}</td>
+                    {% if method.params.has_optional %}
+                    {% if param.optional %}
+                    <td>✔</td>
+                    {% else %}
+                    <td></td>
+                    {% endif %}
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+
+        <p class="description">{{ method.description | markdownify }}</p>
+        <p class="returns">
+            <strong>Returns: </strong>
+            {{ method.returns | list_link_rel | join: ", " }}
+        </p>
+    </div>
+
+    <hr>
+    {% endfor %}
+    {% endfor %}
+</div>
