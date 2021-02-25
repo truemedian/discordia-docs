@@ -95,6 +95,7 @@ layout: default
     <div class="method">
         <h3 class="name" id="{{ method.name | slugify }}">
             <a class="anchor" href="#{{ method.name | slugify }}">{{ method.name }}({{ method.params.simple | join: ", "}})</a>
+            <a class="source anchor" href="https://github.com/truemedian/Discordia/blob/dev-documentation/{{ method.source.file }}#L{{ method.source.line }}">Source</a>
         </h3>
         
         <table class="parameters">
@@ -156,6 +157,7 @@ layout: default
     <div class="method">
         <h3 class="name" id="{{ method.name | slugify }}">
             <a class="anchor" href="#{{ method.name | slugify }}">{{ method.name }}({{ method.params.simple | join: ", "}})</a>
+            <a class="source anchor" href="https://github.com/truemedian/Discordia/blob/dev-documentation/{{ method.source.file }}#L{{ method.source.line }}">Source</a>
         </h3>
         
         {% if method.params.list != empty %}

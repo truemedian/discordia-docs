@@ -116,6 +116,15 @@ h3.name a {
     text-decoration: none;
 }
 
+h3.name a.source {
+    font-size: 0.8em;
+    float: right;
+}
+
+div.method:not(:hover) h3.name a.source {
+    display: none;
+}
+
 table {
     border-spacing: 0;
     border-collapse: collapse;
