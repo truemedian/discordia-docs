@@ -38,7 +38,7 @@ jobs:
 
       - name: Run Generator
         run: |
-          ./luvit ./discordia/docgen.lua ./discordia/libs ./www/src
+          ./luvit ./discordia/docgen ./discordia/libs ./www/src
 
       - name: Setup Site
         working-directory: www
