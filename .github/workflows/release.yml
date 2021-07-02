@@ -30,15 +30,27 @@ jobs:
           ref: dev-documentation
           path: discordia
 
+      - name: Checkout Docgen
+        uses: actions/checkout@master
+        with:
+          repository: truemedian/lua-docgen
+          ref: master
+          path: docgen
+
       - name: Setup Ruby
         uses: actions/setup-ruby@v1
 
       - name: Setup Luvit
         run: curl -L https://github.com/luvit/lit/raw/master/get-lit.sh | sh
 
+      - name: Install Doc Generation
+        working-directory: docgen
+        run: |
+          ../lit make
+
       - name: Run Generator
         run: |
-          ./luvit ./discordia/docgen ./discordia/libs ./www/src
+          ./docgen/docgen ./discordia/libs ./www/src
 
       - name: Setup Site
         working-directory: www
