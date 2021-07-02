@@ -41,7 +41,7 @@ jobs:
         uses: actions/setup-ruby@v1
 
       - name: Setup Luvit
-        run: curl -L https://github.com/luvit/lit/raw/master/get-lit.sh | sh
+        run: curl -L https://github.com/luvit/lit/raw/3.8.1/get-lit.sh | sh
 
       - name: Install Doc Generation
         working-directory: docgen
