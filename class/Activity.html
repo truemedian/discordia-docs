@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Discordia: Activity</title>
+	<link href="/main.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="navigation">
+		<h2>Discordia Documentation</h2>
+		<div class="nav-section">
+			<h3 class="section">Topics</h3>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/Enumerations">Enumerations</a></li>
+				<li><a href="/Resolvable">Resolvable</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Client</h3>
+			<ul>
+				<li><a href="/Client">Client</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Containers</h3>
+			<ul>
+				<li><a href="/Container">Container</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Utilities</h3>
+			<ul>
+				<li><a href="/class/Bitfield">Bitfield</a></li>
+				<li><a href="/class/Color">Color</a></li>
+				<li><a href="/class/Date">Date</a></li>
+				<li><a href="/class/Emitter">Emitter</a>
+					<ul>
+						<li><a href="/class/Clock">Clock</a></li>
+					</ul>
+				</li>
+				<li><a href="/class/Iterable">Iterable</a></li>
+				<li><a href="/class/Listener">Listener</a></li>
+				<li><a href="/class/Logger">Logger</a></li>
+				<li><a href="/class/Mutex">Mutex</a></li>
+				<li><a href="/class/Stopwatch">Stopwatch</a></li>
+				<li><a href="/class/Time">Time</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Structures</h3>
+			<ul>
+				<li><a class="current" href="/class/Activity">Activity</a></li>
+				<li><a href="/class/ActivityAssets">ActivityAssets</a></li>
+				<li><a href="/class/ActivityButton">ActivityButton</a></li>
+				<li><a href="/class/ActivityEmoji">ActivityEmoji</a></li>
+				<li><a href="/class/ActivityParty">ActivityParty</a></li>
+				<li><a href="/class/ActivitySecrets">ActivitySecrets</a></li>
+				<li><a href="/class/ActivityTimestamps">ActivityTimestamps</a></li>
+				<li><a href="/class/Attachment">Attachment</a></li>
+				<li><a href="/class/AuditLogChange">AuditLogChange</a></li>
+				<li><a href="/class/AuditLogOptions">AuditLogOptions</a></li>
+				<li><a href="/class/AuditLogOptions">AuditLogOptions</a></li>
+				<li><a href="/class/CommandChoice">CommandChoice</a></li>
+				<li><a href="/class/CommandOption">CommandOption</a></li>
+				<li><a href="/class/Embed">Embed</a></li>
+				<li><a href="/class/EmbedAuthor">EmbedAuthor</a></li>
+				<li><a href="/class/EmbedField">EmbedField</a></li>
+				<li><a href="/class/EmbedFooter">EmbedFooter</a></li>
+				<li><a href="/class/EmbedImage">EmbedImage</a></li>
+				<li><a href="/class/EmbedProvider">EmbedProvider</a></li>
+				<li><a href="/class/EmbedThumbnail">EmbedThumbnail</a></li>
+				<li><a href="/class/EmbedVideo">EmbedVideo</a></li>
+				<li><a href="/class/GuildCounts">GuildCounts</a></li>
+				<li><a href="/class/InteractionData">InteractionData</a></li>
+				<li><a href="/class/InteractionOption">InteractionOption</a></li>
+				<li><a href="/class/Mention">Mention</a></li>
+				<li><a href="/class/MessageActivity">MessageActivity</a></li>
+				<li><a href="/class/VoiceRegion">VoiceRegion</a></li>
+				<li><a href="/class/VoiceRegion">VoiceRegion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="content">
+		<div id="class">
+			<h1 class="name">Activity</h1>
+			https://discord.com/developers/docs/topics/gateway#activity-object-activity-structure
+			<h2>Table of Contents</h2>
+			<ul class="table-of-contents">
+				<li>
+					<a href="#properties">Properties</a>
+				</li>
+			</ul>
+			<h2 id="properties">Properties</h2>
+			<h3>Table of Contents</h3>
+			<ul class="sub-table-of-contents">
+				<li>
+					<a href="#prop-applicationid">applicationId</a>
+				</li>
+				<li>
+					<a href="#prop-assets">assets</a>
+				</li>
+				<li>
+					<a href="#prop-buttons">buttons</a>
+				</li>
+				<li>
+					<a href="#prop-createdat">createdAt</a>
+				</li>
+				<li>
+					<a href="#prop-details">details</a>
+				</li>
+				<li>
+					<a href="#prop-emoji">emoji</a>
+				</li>
+				<li>
+					<a href="#prop-flags">flags</a>
+				</li>
+				<li>
+					<a href="#prop-instance">instance</a>
+				</li>
+				<li>
+					<a href="#prop-name">name</a>
+				</li>
+				<li>
+					<a href="#prop-party">party</a>
+				</li>
+				<li>
+					<a href="#prop-secrets">secrets</a>
+				</li>
+				<li>
+					<a href="#prop-state">state</a>
+				</li>
+				<li>
+					<a href="#prop-timestamps">timestamps</a>
+				</li>
+				<li>
+					<a href="#prop-type">type</a>
+				</li>
+				<li>
+					<a href="#prop-url">url</a>
+				</li>
+				<li class="filler"></li>
+			</ul>
+			<table class="properties">
+				<thead>
+					<th>Property</th>
+					<th>Type</th>
+					<th>Description</th>
+				</thead>
+				<tbody>
+					<tr id="prop-applicationid">
+						<td>applicationId</td>
+						<td><span class="annotated">
+							string
+							<p>Snowflake</p></span>
+						 or nil</td>
+						<td>application id for the game
+					</tr>
+					<tr id="prop-assets">
+						<td>assets</td>
+						<td><a href="/class/ActivityAssets">ActivityAssets</a> or nil</td>
+						<td>images for the presence and their hover texts
+					</tr>
+					<tr id="prop-buttons">
+						<td>buttons</td>
+						<td><span class="annotated">
+							table
+							<p>An array of ActivityButton values.</p></span>
+						 or nil</td>
+						<td>the custom buttons shown in the Rich Presence (max 2)
+					</tr>
+					<tr id="prop-createdat">
+						<td>createdAt</td>
+						<td>number</td>
+						<td>unix timestamp (in milliseconds) of when the activity was added to the user&#39;s session
+					</tr>
+					<tr id="prop-details">
+						<td>details</td>
+						<td>string or nil</td>
+						<td>what the player is currently doing
+					</tr>
+					<tr id="prop-emoji">
+						<td>emoji</td>
+						<td><a href="/class/ActivityEmoji">ActivityEmoji</a> or nil</td>
+						<td>the emoji used for a custom status
+					</tr>
+					<tr id="prop-flags">
+						<td>flags</td>
+						<td><a href="/Enumerations#activityFlag">activityFlag</a> or nil</td>
+						<td>activity flags <code>OR</code>d together, describes what the payload includes
+					</tr>
+					<tr id="prop-instance">
+						<td>instance</td>
+						<td>boolean</td>
+						<td>whether or not the activity is an instanced game session
+					</tr>
+					<tr id="prop-name">
+						<td>name</td>
+						<td>string</td>
+						<td>the activity&#39;s name
+					</tr>
+					<tr id="prop-party">
+						<td>party</td>
+						<td><a href="/class/ActivityParty">ActivityParty</a> or nil</td>
+						<td>information for the current party of the player
+					</tr>
+					<tr id="prop-secrets">
+						<td>secrets</td>
+						<td><a href="/class/ActivitySecrets">ActivitySecrets</a> or nil</td>
+						<td>secrets for Rich Presence joining and spectating
+					</tr>
+					<tr id="prop-state">
+						<td>state</td>
+						<td>string or nil</td>
+						<td>the user&#39;s current party status
+					</tr>
+					<tr id="prop-timestamps">
+						<td>timestamps</td>
+						<td><a href="/class/ActivityTimestamps">ActivityTimestamps</a> or nil</td>
+						<td>unix timestamps for start and/or end of the game
+					</tr>
+					<tr id="prop-type">
+						<td>type</td>
+						<td><a href="/Enumerations#activityType">activityType</a></td>
+						<td>activity type
+					</tr>
+					<tr id="prop-url">
+						<td>url</td>
+						<td>string or nil</td>
+						<td>stream url, is validated when type is 1
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>

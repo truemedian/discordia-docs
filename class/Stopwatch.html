@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Discordia: Stopwatch</title>
+	<link href="/main.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="navigation">
+		<h2>Discordia Documentation</h2>
+		<div class="nav-section">
+			<h3 class="section">Topics</h3>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/Enumerations">Enumerations</a></li>
+				<li><a href="/Resolvable">Resolvable</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Client</h3>
+			<ul>
+				<li><a href="/Client">Client</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Containers</h3>
+			<ul>
+				<li><a href="/Container">Container</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Utilities</h3>
+			<ul>
+				<li><a href="/class/Bitfield">Bitfield</a></li>
+				<li><a href="/class/Color">Color</a></li>
+				<li><a href="/class/Date">Date</a></li>
+				<li><a href="/class/Emitter">Emitter</a>
+					<ul>
+						<li><a href="/class/Clock">Clock</a></li>
+					</ul>
+				</li>
+				<li><a href="/class/Iterable">Iterable</a></li>
+				<li><a href="/class/Listener">Listener</a></li>
+				<li><a href="/class/Logger">Logger</a></li>
+				<li><a href="/class/Mutex">Mutex</a></li>
+				<li><a class="current" href="/class/Stopwatch">Stopwatch</a></li>
+				<li><a href="/class/Time">Time</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Structures</h3>
+			<ul>
+				<li><a href="/class/Activity">Activity</a></li>
+				<li><a href="/class/ActivityAssets">ActivityAssets</a></li>
+				<li><a href="/class/ActivityButton">ActivityButton</a></li>
+				<li><a href="/class/ActivityEmoji">ActivityEmoji</a></li>
+				<li><a href="/class/ActivityParty">ActivityParty</a></li>
+				<li><a href="/class/ActivitySecrets">ActivitySecrets</a></li>
+				<li><a href="/class/ActivityTimestamps">ActivityTimestamps</a></li>
+				<li><a href="/class/Attachment">Attachment</a></li>
+				<li><a href="/class/AuditLogChange">AuditLogChange</a></li>
+				<li><a href="/class/AuditLogOptions">AuditLogOptions</a></li>
+				<li><a href="/class/AuditLogOptions">AuditLogOptions</a></li>
+				<li><a href="/class/CommandChoice">CommandChoice</a></li>
+				<li><a href="/class/CommandOption">CommandOption</a></li>
+				<li><a href="/class/Embed">Embed</a></li>
+				<li><a href="/class/EmbedAuthor">EmbedAuthor</a></li>
+				<li><a href="/class/EmbedField">EmbedField</a></li>
+				<li><a href="/class/EmbedFooter">EmbedFooter</a></li>
+				<li><a href="/class/EmbedImage">EmbedImage</a></li>
+				<li><a href="/class/EmbedProvider">EmbedProvider</a></li>
+				<li><a href="/class/EmbedThumbnail">EmbedThumbnail</a></li>
+				<li><a href="/class/EmbedVideo">EmbedVideo</a></li>
+				<li><a href="/class/GuildCounts">GuildCounts</a></li>
+				<li><a href="/class/InteractionData">InteractionData</a></li>
+				<li><a href="/class/InteractionOption">InteractionOption</a></li>
+				<li><a href="/class/Mention">Mention</a></li>
+				<li><a href="/class/MessageActivity">MessageActivity</a></li>
+				<li><a href="/class/VoiceRegion">VoiceRegion</a></li>
+				<li><a href="/class/VoiceRegion">VoiceRegion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="content">
+		<div id="class">
+			<h1 class="name">Stopwatch</h1>
+			Used to measure an elapsed period of time. Although nanosecond precision is available, Lua can only reliably provide microsecond accuracy due to the lack of native 64-bit integer support. Generally, milliseconds should be sufficient here.
+			<h2>Table of Contents</h2>
+			<ul class="table-of-contents">
+				<li>
+					<a href="#methods">Methods</a>
+				</li>
+			</ul>
+			<h2 id="constructor">Constructor</h2>
+			<div class="method">
+				<h3 class="name">
+					<a class="anchor" href="#constructor">Stopwatch(stopped)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>stopped</td>
+							<td>boolean</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+			</div>
+			<h2 id="methods">Methods</h2>
+			<h3>Table of Contents</h3>
+			<ul class="sub-table-of-contents">
+				<li>
+					<a href="#method-gettime">getTime</a>
+				</li>
+				<li>
+					<a href="#method-reset">reset</a>
+				</li>
+				<li>
+					<a href="#method-start">start</a>
+				</li>
+				<li>
+					<a href="#method-stop">stop</a>
+				</li>
+				<li>
+					<a href="#method-tostring">toString</a>
+				</li>
+				<li class="filler"></li>
+			</ul>
+			<div class="method" id="method-gettime">
+				<h3 class="name">
+					<a class="anchor" href="#method-gettime">getTime()</a>
+				</h3>
+				<div class="description">
+					Returns a new Time object that represents the currently elapsed time. This is useful for &#39;catching&#39; the current time and comparing its many forms as required.
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong><a href="/class/Time">Time</a>
+				</div>
+			</div>
+			<div class="method" id="method-reset">
+				<h3 class="name">
+					<a class="anchor" href="#method-reset">reset()</a>
+				</h3>
+				<div class="description">
+					Resets the stopwatch. If the stopwatch currently running, the start time is reset to the current time. If the stopwatch is stopped, the start time is reset to the time that the stopwatch was stopped.
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>nil
+				</div>
+			</div>
+			<div class="method" id="method-start">
+				<h3 class="name">
+					<a class="anchor" href="#method-start">start()</a>
+				</h3>
+				<div class="description">
+					Starts the stopwatch. This function is idempotent, calling it multiple times has no effect.
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>nil
+				</div>
+			</div>
+			<div class="method" id="method-stop">
+				<h3 class="name">
+					<a class="anchor" href="#method-stop">stop()</a>
+				</h3>
+				<div class="description">
+					Stops the stopwatch, time elapsed will no longer increase.
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>nil
+				</div>
+			</div>
+			<div class="method" id="method-tostring">
+				<h3 class="name">
+					<a class="anchor" href="#method-tostring">toString()</a>
+				</h3>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>string
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
