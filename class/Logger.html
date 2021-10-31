@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Discordia: Logger</title>
+	<link href="/main.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="navigation">
+		<h2>Discordia Documentation</h2>
+		<div class="nav-section">
+			<h3 class="section">Topics</h3>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/Enumerations">Enumerations</a></li>
+				<li><a href="/Resolvable">Resolvable</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Client</h3>
+			<ul>
+				<li><a href="/Client">Client</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Containers</h3>
+			<ul>
+				<li><a href="/Container">Container</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Utilities</h3>
+			<ul>
+				<li><a href="/class/Bitfield">Bitfield</a></li>
+				<li><a href="/class/Color">Color</a></li>
+				<li><a href="/class/Date">Date</a></li>
+				<li><a href="/class/Emitter">Emitter</a>
+					<ul>
+						<li><a href="/class/Clock">Clock</a></li>
+					</ul>
+				</li>
+				<li><a href="/class/Iterable">Iterable</a></li>
+				<li><a href="/class/Listener">Listener</a></li>
+				<li><a class="current" href="/class/Logger">Logger</a></li>
+				<li><a href="/class/Mutex">Mutex</a></li>
+				<li><a href="/class/Stopwatch">Stopwatch</a></li>
+				<li><a href="/class/Time">Time</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Structures</h3>
+			<ul>
+				<li><a href="/class/Activity">Activity</a></li>
+				<li><a href="/class/ActivityAssets">ActivityAssets</a></li>
+				<li><a href="/class/ActivityButton">ActivityButton</a></li>
+				<li><a href="/class/ActivityEmoji">ActivityEmoji</a></li>
+				<li><a href="/class/ActivityParty">ActivityParty</a></li>
+				<li><a href="/class/ActivitySecrets">ActivitySecrets</a></li>
+				<li><a href="/class/ActivityTimestamps">ActivityTimestamps</a></li>
+				<li><a href="/class/Attachment">Attachment</a></li>
+				<li><a href="/class/AuditLogChange">AuditLogChange</a></li>
+				<li><a href="/class/AuditLogOptions">AuditLogOptions</a></li>
+				<li><a href="/class/AuditLogOptions">AuditLogOptions</a></li>
+				<li><a href="/class/CommandChoice">CommandChoice</a></li>
+				<li><a href="/class/CommandOption">CommandOption</a></li>
+				<li><a href="/class/Embed">Embed</a></li>
+				<li><a href="/class/EmbedAuthor">EmbedAuthor</a></li>
+				<li><a href="/class/EmbedField">EmbedField</a></li>
+				<li><a href="/class/EmbedFooter">EmbedFooter</a></li>
+				<li><a href="/class/EmbedImage">EmbedImage</a></li>
+				<li><a href="/class/EmbedProvider">EmbedProvider</a></li>
+				<li><a href="/class/EmbedThumbnail">EmbedThumbnail</a></li>
+				<li><a href="/class/EmbedVideo">EmbedVideo</a></li>
+				<li><a href="/class/GuildCounts">GuildCounts</a></li>
+				<li><a href="/class/InteractionData">InteractionData</a></li>
+				<li><a href="/class/InteractionOption">InteractionOption</a></li>
+				<li><a href="/class/Mention">Mention</a></li>
+				<li><a href="/class/MessageActivity">MessageActivity</a></li>
+				<li><a href="/class/VoiceRegion">VoiceRegion</a></li>
+				<li><a href="/class/VoiceRegion">VoiceRegion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="content">
+		<div id="class">
+			<h1 class="name">Logger</h1>
+			TODO
+			<h2>Table of Contents</h2>
+			<ul class="table-of-contents">
+				<li>
+					<a href="#methods">Methods</a>
+				</li>
+			</ul>
+			<h2 id="constructor">Constructor</h2>
+			<div class="method">
+				<h3 class="name">
+					<a class="anchor" href="#constructor">Logger(level, dateFormat, filePath, useColors)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>level</td>
+							<td><a href="/Enumerations#logLevel">logLevel</a></td>
+						</tr>
+						<tr>
+							<td>dateFormat<abbr class="note" title="Optional">?</div></td>
+							<td>string</td>
+						</tr>
+						<tr>
+							<td>filePath<abbr class="note" title="Optional">?</div></td>
+							<td>string</td>
+						</tr>
+						<tr>
+							<td>useColors<abbr class="note" title="Optional">?</div></td>
+							<td>boolean</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+			</div>
+			<h2 id="methods">Methods</h2>
+			<h3>Table of Contents</h3>
+			<ul class="sub-table-of-contents">
+				<li>
+					<a href="#method-disablecolors">disableColors</a>
+				</li>
+				<li>
+					<a href="#method-enablecolors">enableColors</a>
+				</li>
+				<li>
+					<a href="#method-log">log</a>
+				</li>
+				<li>
+					<a href="#method-setdatetime">setDateTime</a>
+				</li>
+				<li>
+					<a href="#method-setfile">setFile</a>
+				</li>
+				<li>
+					<a href="#method-setlevel">setLevel</a>
+				</li>
+				<li class="filler"></li>
+			</ul>
+			<div class="method" id="method-disablecolors">
+				<h3 class="name">
+					<a class="anchor" href="#method-disablecolors">disableColors()</a>
+				</h3>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>
+				</div>
+			</div>
+			<div class="method" id="method-enablecolors">
+				<h3 class="name">
+					<a class="anchor" href="#method-enablecolors">enableColors()</a>
+				</h3>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>
+				</div>
+			</div>
+			<div class="method" id="method-log">
+				<h3 class="name">
+					<a class="anchor" href="#method-log">log(level, msg, ...)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>level</td>
+							<td><a href="/Enumerations#logLevel">logLevel</a></td>
+						</tr>
+						<tr>
+							<td>msg</td>
+							<td>string</td>
+						</tr>
+						<tr>
+							<td>...</td>
+							<td>any</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>
+				</div>
+			</div>
+			<div class="method" id="method-setdatetime">
+				<h3 class="name">
+					<a class="anchor" href="#method-setdatetime">setDateTime(dateFormat)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>dateFormat</td>
+							<td>string</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>
+				</div>
+			</div>
+			<div class="method" id="method-setfile">
+				<h3 class="name">
+					<a class="anchor" href="#method-setfile">setFile(path)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>path</td>
+							<td>string</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>
+				</div>
+			</div>
+			<div class="method" id="method-setlevel">
+				<h3 class="name">
+					<a class="anchor" href="#method-setlevel">setLevel(level)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>level</td>
+							<td><a href="/Enumerations#logLevel">logLevel</a></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

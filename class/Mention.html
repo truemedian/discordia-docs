@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Discordia: Mention</title>
+	<link href="/main.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="navigation">
+		<h2>Discordia Documentation</h2>
+		<div class="nav-section">
+			<h3 class="section">Topics</h3>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/Enumerations">Enumerations</a></li>
+				<li><a href="/Resolvable">Resolvable</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Client</h3>
+			<ul>
+				<li><a href="/Client">Client</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Containers</h3>
+			<ul>
+				<li><a href="/Container">Container</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Utilities</h3>
+			<ul>
+				<li><a href="/class/Bitfield">Bitfield</a></li>
+				<li><a href="/class/Color">Color</a></li>
+				<li><a href="/class/Date">Date</a></li>
+				<li><a href="/class/Emitter">Emitter</a>
+					<ul>
+						<li><a href="/class/Clock">Clock</a></li>
+					</ul>
+				</li>
+				<li><a href="/class/Iterable">Iterable</a></li>
+				<li><a href="/class/Listener">Listener</a></li>
+				<li><a href="/class/Logger">Logger</a></li>
+				<li><a href="/class/Mutex">Mutex</a></li>
+				<li><a href="/class/Stopwatch">Stopwatch</a></li>
+				<li><a href="/class/Time">Time</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Structures</h3>
+			<ul>
+				<li><a href="/class/Activity">Activity</a></li>
+				<li><a href="/class/ActivityAssets">ActivityAssets</a></li>
+				<li><a href="/class/ActivityButton">ActivityButton</a></li>
+				<li><a href="/class/ActivityEmoji">ActivityEmoji</a></li>
+				<li><a href="/class/ActivityParty">ActivityParty</a></li>
+				<li><a href="/class/ActivitySecrets">ActivitySecrets</a></li>
+				<li><a href="/class/ActivityTimestamps">ActivityTimestamps</a></li>
+				<li><a href="/class/Attachment">Attachment</a></li>
+				<li><a href="/class/AuditLogChange">AuditLogChange</a></li>
+				<li><a href="/class/AuditLogOptions">AuditLogOptions</a></li>
+				<li><a href="/class/AuditLogOptions">AuditLogOptions</a></li>
+				<li><a href="/class/CommandChoice">CommandChoice</a></li>
+				<li><a href="/class/CommandOption">CommandOption</a></li>
+				<li><a href="/class/Embed">Embed</a></li>
+				<li><a href="/class/EmbedAuthor">EmbedAuthor</a></li>
+				<li><a href="/class/EmbedField">EmbedField</a></li>
+				<li><a href="/class/EmbedFooter">EmbedFooter</a></li>
+				<li><a href="/class/EmbedImage">EmbedImage</a></li>
+				<li><a href="/class/EmbedProvider">EmbedProvider</a></li>
+				<li><a href="/class/EmbedThumbnail">EmbedThumbnail</a></li>
+				<li><a href="/class/EmbedVideo">EmbedVideo</a></li>
+				<li><a href="/class/GuildCounts">GuildCounts</a></li>
+				<li><a href="/class/InteractionData">InteractionData</a></li>
+				<li><a href="/class/InteractionOption">InteractionOption</a></li>
+				<li><a class="current" href="/class/Mention">Mention</a></li>
+				<li><a href="/class/MessageActivity">MessageActivity</a></li>
+				<li><a href="/class/VoiceRegion">VoiceRegion</a></li>
+				<li><a href="/class/VoiceRegion">VoiceRegion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="content">
+		<div id="class">
+			<h1 class="name">Mention</h1>
+			TODO
+			<h2>Table of Contents</h2>
+			<ul class="table-of-contents">
+				<li>
+					<a href="#properties">Properties</a>
+				</li>
+			</ul>
+			<h2 id="properties">Properties</h2>
+			<h3>Table of Contents</h3>
+			<ul class="sub-table-of-contents">
+				<li>
+					<a href="#prop-id">id</a>
+				</li>
+				<li>
+					<a href="#prop-name">name</a>
+				</li>
+				<li>
+					<a href="#prop-raw">raw</a>
+				</li>
+				<li>
+					<a href="#prop-raw">raw</a>
+				</li>
+				<li>
+					<a href="#prop-style">style</a>
+				</li>
+				<li>
+					<a href="#prop-timestamp">timestamp</a>
+				</li>
+				<li>
+					<a href="#prop-type">type</a>
+				</li>
+				<li class="filler"></li>
+			</ul>
+			<table class="properties">
+				<thead>
+					<th>Property</th>
+					<th>Type</th>
+					<th>Description</th>
+				</thead>
+				<tbody>
+					<tr id="prop-id">
+						<td>id</td>
+						<td><span class="annotated">
+							string
+							<p>Snowflake</p></span>
+						</td>
+						<td>the id of this mention&#39;s target
+					</tr>
+					<tr id="prop-name">
+						<td>name</td>
+						<td>string or nil</td>
+						<td>the name of the mentioned emoji (if emoji)
+					</tr>
+					<tr id="prop-raw">
+						<td>raw</td>
+						<td>string</td>
+						<td>this mention&#39;s raw string form
+					</tr>
+					<tr id="prop-raw">
+						<td>raw</td>
+						<td>boolean or nil</td>
+						<td>whether this mention is animated or not (if emoji)
+					</tr>
+					<tr id="prop-style">
+						<td>style</td>
+						<td><a href="/Enumeration#timestampStyle">timestampStyle</a> or nil</td>
+						<td>the style of the timestamp (if timestamp)
+					</tr>
+					<tr id="prop-timestamp">
+						<td>timestamp</td>
+						<td>string or nil</td>
+						<td>unix timestamp (in seconds) that this mention refers to (if timestamp)
+					</tr>
+					<tr id="prop-type">
+						<td>type</td>
+						<td><a href="/Enumeration#mentionType">mentionType</a></td>
+						<td>this mention&#39;s type
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,1742 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Discordia: Enumerations</title>
+	<link href="/main.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="navigation">
+		<h2>Discordia Documentation</h2>
+		<div class="nav-section">
+			<h3 class="section">Topics</h3>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a class="current" href="/Enumerations">Enumerations</a></li>
+				<li><a href="/Resolvable">Resolvable</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Client</h3>
+			<ul>
+				<li><a href="/Client">Client</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Containers</h3>
+			<ul>
+				<li><a href="/Container">Container</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Utilities</h3>
+			<ul>
+				<li><a href="/class/Bitfield">Bitfield</a></li>
+				<li><a href="/class/Color">Color</a></li>
+				<li><a href="/class/Date">Date</a></li>
+				<li><a href="/class/Emitter">Emitter</a>
+					<ul>
+						<li><a href="/class/Clock">Clock</a></li>
+					</ul>
+				</li>
+				<li><a href="/class/Iterable">Iterable</a></li>
+				<li><a href="/class/Listener">Listener</a></li>
+				<li><a href="/class/Logger">Logger</a></li>
+				<li><a href="/class/Mutex">Mutex</a></li>
+				<li><a href="/class/Stopwatch">Stopwatch</a></li>
+				<li><a href="/class/Time">Time</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Structures</h3>
+			<ul>
+				<li><a href="/class/Activity">Activity</a></li>
+				<li><a href="/class/ActivityAssets">ActivityAssets</a></li>
+				<li><a href="/class/ActivityButton">ActivityButton</a></li>
+				<li><a href="/class/ActivityEmoji">ActivityEmoji</a></li>
+				<li><a href="/class/ActivityParty">ActivityParty</a></li>
+				<li><a href="/class/ActivitySecrets">ActivitySecrets</a></li>
+				<li><a href="/class/ActivityTimestamps">ActivityTimestamps</a></li>
+				<li><a href="/class/Attachment">Attachment</a></li>
+				<li><a href="/class/AuditLogChange">AuditLogChange</a></li>
+				<li><a href="/class/AuditLogOptions">AuditLogOptions</a></li>
+				<li><a href="/class/AuditLogOptions">AuditLogOptions</a></li>
+				<li><a href="/class/CommandChoice">CommandChoice</a></li>
+				<li><a href="/class/CommandOption">CommandOption</a></li>
+				<li><a href="/class/Embed">Embed</a></li>
+				<li><a href="/class/EmbedAuthor">EmbedAuthor</a></li>
+				<li><a href="/class/EmbedField">EmbedField</a></li>
+				<li><a href="/class/EmbedFooter">EmbedFooter</a></li>
+				<li><a href="/class/EmbedImage">EmbedImage</a></li>
+				<li><a href="/class/EmbedProvider">EmbedProvider</a></li>
+				<li><a href="/class/EmbedThumbnail">EmbedThumbnail</a></li>
+				<li><a href="/class/EmbedVideo">EmbedVideo</a></li>
+				<li><a href="/class/GuildCounts">GuildCounts</a></li>
+				<li><a href="/class/InteractionData">InteractionData</a></li>
+				<li><a href="/class/InteractionOption">InteractionOption</a></li>
+				<li><a href="/class/Mention">Mention</a></li>
+				<li><a href="/class/MessageActivity">MessageActivity</a></li>
+				<li><a href="/class/VoiceRegion">VoiceRegion</a></li>
+				<li><a href="/class/VoiceRegion">VoiceRegion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="content">
+		<div id="enumerations">
+			<h1 class="name">Enumerations</h1>
+			<h3>Table of Contents</h3>
+			<ul class="sub-table-of-contents">
+				<li>
+					<a href="#enum-actiontype">actionType</a>
+				</li>
+				<li>
+					<a href="#enum-activityflag">activityFlag</a>
+				</li>
+				<li>
+					<a href="#enum-activitytype">activityType</a>
+				</li>
+				<li>
+					<a href="#enum-applicationflag">applicationFlag</a>
+				</li>
+				<li>
+					<a href="#enum-channeltype">channelType</a>
+				</li>
+				<li>
+					<a href="#enum-clientevent">clientEvent</a>
+				</li>
+				<li>
+					<a href="#enum-commandoptiontype">commandOptionType</a>
+				</li>
+				<li>
+					<a href="#enum-commandpermissiontype">commandPermissionType</a>
+				</li>
+				<li>
+					<a href="#enum-defaultavatar">defaultAvatar</a>
+				</li>
+				<li>
+					<a href="#enum-embedtype">embedType</a>
+				</li>
+				<li>
+					<a href="#enum-explicitcontentlevel">explicitContentLevel</a>
+				</li>
+				<li>
+					<a href="#enum-gatewayintent">gatewayIntent</a>
+				</li>
+				<li>
+					<a href="#enum-interactionrequesttype">interactionRequestType</a>
+				</li>
+				<li>
+					<a href="#enum-interactionresponseflag">interactionResponseFlag</a>
+				</li>
+				<li>
+					<a href="#enum-interactionresponsetype">interactionResponseType</a>
+				</li>
+				<li>
+					<a href="#enum-loglevel">logLevel</a>
+				</li>
+				<li>
+					<a href="#enum-mentiontype">mentionType</a>
+				</li>
+				<li>
+					<a href="#enum-messageactivitytype">messageActivityType</a>
+				</li>
+				<li>
+					<a href="#enum-messageflag">messageFlag</a>
+				</li>
+				<li>
+					<a href="#enum-messagetype">messageType</a>
+				</li>
+				<li>
+					<a href="#enum-notificationsetting">notificationSetting</a>
+				</li>
+				<li>
+					<a href="#enum-permission">permission</a>
+				</li>
+				<li>
+					<a href="#enum-permissionoverwritetype">permissionOverwriteType</a>
+				</li>
+				<li>
+					<a href="#enum-premiumtier">premiumTier</a>
+				</li>
+				<li>
+					<a href="#enum-premiumtype">premiumType</a>
+				</li>
+				<li>
+					<a href="#enum-status">status</a>
+				</li>
+				<li>
+					<a href="#enum-teammembershipstate">teamMembershipState</a>
+				</li>
+				<li>
+					<a href="#enum-timestampstyle">timestampStyle</a>
+				</li>
+				<li>
+					<a href="#enum-userflag">userFlag</a>
+				</li>
+				<li>
+					<a href="#enum-verificationlevel">verificationLevel</a>
+				</li>
+				<li>
+					<a href="#enum-webhooktype">webhookType</a>
+				</li>
+				<li>
+					<a href="#enum-whence">whence</a>
+				</li>
+				<li class="filler"></li>
+			</ul>
+			<div class="enum" id="enum-actiontype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-actiontype">actionType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>guildUpdate</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>channelCreate</td>
+							<td>10</td>
+						</tr>
+						<tr>
+							<td>channelUpdate</td>
+							<td>11</td>
+						</tr>
+						<tr>
+							<td>channelDelete</td>
+							<td>12</td>
+						</tr>
+						<tr>
+							<td>channelOverwriteCreate</td>
+							<td>13</td>
+						</tr>
+						<tr>
+							<td>channelOverwriteUpdate</td>
+							<td>14</td>
+						</tr>
+						<tr>
+							<td>channelOverwriteDelete</td>
+							<td>15</td>
+						</tr>
+						<tr>
+							<td>memberKick</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>memberPrune</td>
+							<td>21</td>
+						</tr>
+						<tr>
+							<td>memberBanAdd</td>
+							<td>22</td>
+						</tr>
+						<tr>
+							<td>memberBanRemove</td>
+							<td>23</td>
+						</tr>
+						<tr>
+							<td>memberUpdate</td>
+							<td>24</td>
+						</tr>
+						<tr>
+							<td>memberRoleUpdate</td>
+							<td>25</td>
+						</tr>
+						<tr>
+							<td>memberMove</td>
+							<td>26</td>
+						</tr>
+						<tr>
+							<td>memberDisconnect</td>
+							<td>27</td>
+						</tr>
+						<tr>
+							<td>botAdd</td>
+							<td>28</td>
+						</tr>
+						<tr>
+							<td>roleCreate</td>
+							<td>30</td>
+						</tr>
+						<tr>
+							<td>roleUpdate</td>
+							<td>31</td>
+						</tr>
+						<tr>
+							<td>roleDelete</td>
+							<td>32</td>
+						</tr>
+						<tr>
+							<td>inviteCreate</td>
+							<td>40</td>
+						</tr>
+						<tr>
+							<td>inviteUpdate</td>
+							<td>41</td>
+						</tr>
+						<tr>
+							<td>inviteDelete</td>
+							<td>42</td>
+						</tr>
+						<tr>
+							<td>webhookCreate</td>
+							<td>50</td>
+						</tr>
+						<tr>
+							<td>webhookUpdate</td>
+							<td>51</td>
+						</tr>
+						<tr>
+							<td>webhookDelete</td>
+							<td>52</td>
+						</tr>
+						<tr>
+							<td>emojiCreate</td>
+							<td>60</td>
+						</tr>
+						<tr>
+							<td>emojiUpdate</td>
+							<td>61</td>
+						</tr>
+						<tr>
+							<td>emojiDelete</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td>messageDelete</td>
+							<td>72</td>
+						</tr>
+						<tr>
+							<td>messageBulkDelete</td>
+							<td>73</td>
+						</tr>
+						<tr>
+							<td>messagePin</td>
+							<td>74</td>
+						</tr>
+						<tr>
+							<td>messageUnpin</td>
+							<td>75</td>
+						</tr>
+						<tr>
+							<td>integrationCreate</td>
+							<td>80</td>
+						</tr>
+						<tr>
+							<td>integrationUpdate</td>
+							<td>81</td>
+						</tr>
+						<tr>
+							<td>integrationDelete</td>
+							<td>82</td>
+						</tr>
+						<tr>
+							<td>stageInstanceCreate</td>
+							<td>83</td>
+						</tr>
+						<tr>
+							<td>stageInstanceUpdate</td>
+							<td>84</td>
+						</tr>
+						<tr>
+							<td>stageInstanceDelete</td>
+							<td>85</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-activityflag">
+				<h3 class="name">
+					<a class="anchor" href="#enum-activityflag">activityFlag</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>instance</td>
+							<td>0x1</td>
+						</tr>
+						<tr>
+							<td>join</td>
+							<td>0x2</td>
+						</tr>
+						<tr>
+							<td>spectate</td>
+							<td>0x4</td>
+						</tr>
+						<tr>
+							<td>joinRequest</td>
+							<td>0x8</td>
+						</tr>
+						<tr>
+							<td>sync</td>
+							<td>0x10</td>
+						</tr>
+						<tr>
+							<td>play</td>
+							<td>0x20</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-activitytype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-activitytype">activityType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>playing</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>streaming</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>listening</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>watching</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>custom</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>competing</td>
+							<td>5</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-applicationflag">
+				<h3 class="name">
+					<a class="anchor" href="#enum-applicationflag">applicationFlag</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>gatewayPresence</td>
+							<td>0x1000</td>
+						</tr>
+						<tr>
+							<td>gatewayPresenceLimited</td>
+							<td>0x2000</td>
+						</tr>
+						<tr>
+							<td>gatewayGuildMembers</td>
+							<td>0x4000</td>
+						</tr>
+						<tr>
+							<td>gatewayGuildMembersLimited</td>
+							<td>0x8000</td>
+						</tr>
+						<tr>
+							<td>verificationPendingGuildLimit</td>
+							<td>0x10000</td>
+						</tr>
+						<tr>
+							<td>embedded</td>
+							<td>0x20000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-channeltype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-channeltype">channelType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>text</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>private</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>voice</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>group</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>category</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>news</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>store</td>
+							<td>6</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-clientevent">
+				<h3 class="name">
+					<a class="anchor" href="#enum-clientevent">clientEvent</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>httpRequest</td>
+							<td>"httpRequest"</td>
+						</tr>
+						<tr>
+							<td>gatewayEvent</td>
+							<td>"gatewayEvent"</td>
+						</tr>
+						<tr>
+							<td>sessionReady</td>
+							<td>"sessionReady"</td>
+						</tr>
+						<tr>
+							<td>sessionResumed</td>
+							<td>"sessionResumed"</td>
+						</tr>
+						<tr>
+							<td>heartbeat</td>
+							<td>"heartbeat"</td>
+						</tr>
+						<tr>
+							<td>gatewayCommand</td>
+							<td>"gatewayCommand"</td>
+						</tr>
+						<tr>
+							<td>membersChunk</td>
+							<td>"membersChunk"</td>
+						</tr>
+						<tr>
+							<td>ready</td>
+							<td>"ready"</td>
+						</tr>
+						<tr>
+							<td>channelCreate</td>
+							<td>"channelCreate"</td>
+						</tr>
+						<tr>
+							<td>channelUpdate</td>
+							<td>"channelUpdate"</td>
+						</tr>
+						<tr>
+							<td>channelDelete</td>
+							<td>"channelDelete"</td>
+						</tr>
+						<tr>
+							<td>pinsUpdate</td>
+							<td>"pinsUpdate"</td>
+						</tr>
+						<tr>
+							<td>guildAvailable</td>
+							<td>"guildAvailable"</td>
+						</tr>
+						<tr>
+							<td>guildCreate</td>
+							<td>"guildCreate"</td>
+						</tr>
+						<tr>
+							<td>guildUpdate</td>
+							<td>"guildUpdate"</td>
+						</tr>
+						<tr>
+							<td>guildUnavailable</td>
+							<td>"guildUnavailable"</td>
+						</tr>
+						<tr>
+							<td>guildDelete</td>
+							<td>"guildDelete"</td>
+						</tr>
+						<tr>
+							<td>userBan</td>
+							<td>"userBan"</td>
+						</tr>
+						<tr>
+							<td>userUnban</td>
+							<td>"userUnban"</td>
+						</tr>
+						<tr>
+							<td>emojisUpdate</td>
+							<td>"emojisUpdate"</td>
+						</tr>
+						<tr>
+							<td>integrationsUpdate</td>
+							<td>"integrationsUpdate"</td>
+						</tr>
+						<tr>
+							<td>memberJoin</td>
+							<td>"memberJoin"</td>
+						</tr>
+						<tr>
+							<td>memberUpdate</td>
+							<td>"memberUpdate"</td>
+						</tr>
+						<tr>
+							<td>memberRemove</td>
+							<td>"memberRemove"</td>
+						</tr>
+						<tr>
+							<td>roleCreate</td>
+							<td>"roleCreate"</td>
+						</tr>
+						<tr>
+							<td>roleUpdate</td>
+							<td>"roleUpdate"</td>
+						</tr>
+						<tr>
+							<td>roleDelete</td>
+							<td>"roleDelete"</td>
+						</tr>
+						<tr>
+							<td>inviteCreate</td>
+							<td>"inviteCreate"</td>
+						</tr>
+						<tr>
+							<td>inviteDelete</td>
+							<td>"inviteDelete"</td>
+						</tr>
+						<tr>
+							<td>messageCreate</td>
+							<td>"messageCreate"</td>
+						</tr>
+						<tr>
+							<td>messageUpdate</td>
+							<td>"messageUpdate"</td>
+						</tr>
+						<tr>
+							<td>messageDelete</td>
+							<td>"messageDelete"</td>
+						</tr>
+						<tr>
+							<td>messageDeleteBulk</td>
+							<td>"messageDeleteBulk"</td>
+						</tr>
+						<tr>
+							<td>reactionAdd</td>
+							<td>"reactionAdd"</td>
+						</tr>
+						<tr>
+							<td>reactionRemove</td>
+							<td>"reactionRemove"</td>
+						</tr>
+						<tr>
+							<td>reactionRemoveAll</td>
+							<td>"reactionRemoveAll"</td>
+						</tr>
+						<tr>
+							<td>reactionRemoveEmoji</td>
+							<td>"reactionRemoveEmoji"</td>
+						</tr>
+						<tr>
+							<td>presenceUpdate</td>
+							<td>"presenceUpdate"</td>
+						</tr>
+						<tr>
+							<td>typingStart</td>
+							<td>"typingStart"</td>
+						</tr>
+						<tr>
+							<td>userUpdate</td>
+							<td>"userUpdate"</td>
+						</tr>
+						<tr>
+							<td>webhookUpdate</td>
+							<td>"webhookUpdate"</td>
+						</tr>
+						<tr>
+							<td>commandCreate</td>
+							<td>"commandCreate"</td>
+						</tr>
+						<tr>
+							<td>commandUpdate</td>
+							<td>"commandUpdate"</td>
+						</tr>
+						<tr>
+							<td>commandDelete</td>
+							<td>"commandDelete"</td>
+						</tr>
+						<tr>
+							<td>interactionCreate</td>
+							<td>"interactionCreate"</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-commandoptiontype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-commandoptiontype">commandOptionType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>subCommand</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>subCommandGroup</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>string</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>integer</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>boolean</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>user</td>
+							<td>6</td>
+						</tr>
+						<tr>
+							<td>channel</td>
+							<td>7</td>
+						</tr>
+						<tr>
+							<td>role</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>mentionable</td>
+							<td>9</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-commandpermissiontype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-commandpermissiontype">commandPermissionType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>role</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>user</td>
+							<td>2</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-defaultavatar">
+				<h3 class="name">
+					<a class="anchor" href="#enum-defaultavatar">defaultAvatar</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>blurple</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>gray</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>green</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>orange</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>red</td>
+							<td>4</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-embedtype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-embedtype">embedType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>rich</td>
+							<td>"rich"</td>
+						</tr>
+						<tr>
+							<td>image</td>
+							<td>"image"</td>
+						</tr>
+						<tr>
+							<td>video</td>
+							<td>"video"</td>
+						</tr>
+						<tr>
+							<td>gifv</td>
+							<td>"gifv"</td>
+						</tr>
+						<tr>
+							<td>article</td>
+							<td>"article"</td>
+						</tr>
+						<tr>
+							<td>link</td>
+							<td>"link"</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-explicitcontentlevel">
+				<h3 class="name">
+					<a class="anchor" href="#enum-explicitcontentlevel">explicitContentLevel</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>none</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>medium</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>high</td>
+							<td>2</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-gatewayintent">
+				<h3 class="name">
+					<a class="anchor" href="#enum-gatewayintent">gatewayIntent</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>guilds</td>
+							<td>0x1</td>
+						</tr>
+						<tr>
+							<td>guildMembers</td>
+							<td>0x2</td>
+						</tr>
+						<tr>
+							<td>guildBans</td>
+							<td>0x4</td>
+						</tr>
+						<tr>
+							<td>guildEmojis</td>
+							<td>0x8</td>
+						</tr>
+						<tr>
+							<td>guildIntegrations</td>
+							<td>0x10</td>
+						</tr>
+						<tr>
+							<td>guildWebhooks</td>
+							<td>0x20</td>
+						</tr>
+						<tr>
+							<td>guildInvites</td>
+							<td>0x40</td>
+						</tr>
+						<tr>
+							<td>guildVoiceStates</td>
+							<td>0x80</td>
+						</tr>
+						<tr>
+							<td>guildPresences</td>
+							<td>0x100</td>
+						</tr>
+						<tr>
+							<td>guildMessages</td>
+							<td>0x200</td>
+						</tr>
+						<tr>
+							<td>guildMessageReactions</td>
+							<td>0x400</td>
+						</tr>
+						<tr>
+							<td>guildMessageTyping</td>
+							<td>0x800</td>
+						</tr>
+						<tr>
+							<td>directMessage</td>
+							<td>0x1000</td>
+						</tr>
+						<tr>
+							<td>directMessageRections</td>
+							<td>0x2000</td>
+						</tr>
+						<tr>
+							<td>directMessageTyping</td>
+							<td>0x4000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-interactionrequesttype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-interactionrequesttype">interactionRequestType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>ping</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>applicationCommand</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>messageComponent</td>
+							<td>3</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-interactionresponseflag">
+				<h3 class="name">
+					<a class="anchor" href="#enum-interactionresponseflag">interactionResponseFlag</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>ephemeral</td>
+							<td>0x40</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-interactionresponsetype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-interactionresponsetype">interactionResponseType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>pong</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>channelMessageWithSource</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>deferredChannelMessageWithSource</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>deferredUpdateMessage</td>
+							<td>6</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-loglevel">
+				<h3 class="name">
+					<a class="anchor" href="#enum-loglevel">logLevel</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>none</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>critical</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>error</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>warning</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>info</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>debug</td>
+							<td>5</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-mentiontype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-mentiontype">mentionType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>user</td>
+							<td>"user"</td>
+						</tr>
+						<tr>
+							<td>role</td>
+							<td>"role"</td>
+						</tr>
+						<tr>
+							<td>channel</td>
+							<td>"channel"</td>
+						</tr>
+						<tr>
+							<td>emoji</td>
+							<td>"emoji"</td>
+						</tr>
+						<tr>
+							<td>timestamp</td>
+							<td>"timestamp"</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-messageactivitytype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-messageactivitytype">messageActivityType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>join</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>spectate</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>listen</td>
+							<td>3</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-messageflag">
+				<h3 class="name">
+					<a class="anchor" href="#enum-messageflag">messageFlag</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>crossposted</td>
+							<td>0x1</td>
+						</tr>
+						<tr>
+							<td>isCrosspost</td>
+							<td>0x2</td>
+						</tr>
+						<tr>
+							<td>suppressEmbeds</td>
+							<td>0x4</td>
+						</tr>
+						<tr>
+							<td>sourceMessageDeleted</td>
+							<td>0x8</td>
+						</tr>
+						<tr>
+							<td>urgent</td>
+							<td>0x10</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-messagetype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-messagetype">messageType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>default</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>recipientAdd</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>recipientRemove</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>call</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>channelNameChange</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>channelIconchange</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>pinnedMessage</td>
+							<td>6</td>
+						</tr>
+						<tr>
+							<td>memberJoin</td>
+							<td>7</td>
+						</tr>
+						<tr>
+							<td>premiumGuildSubscription</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>premiumGuildSubscriptionTier1</td>
+							<td>9</td>
+						</tr>
+						<tr>
+							<td>premiumGuildSubscriptionTier2</td>
+							<td>10</td>
+						</tr>
+						<tr>
+							<td>premiumGuildSubscriptionTier3</td>
+							<td>11</td>
+						</tr>
+						<tr>
+							<td>channelFollowAdd</td>
+							<td>12</td>
+						</tr>
+						<tr>
+							<td>guildDiscoveryDisqualified</td>
+							<td>14</td>
+						</tr>
+						<tr>
+							<td>guildDiscoveryRequalified</td>
+							<td>15</td>
+						</tr>
+						<tr>
+							<td>guildDiscoveryInitialWarning</td>
+							<td>16</td>
+						</tr>
+						<tr>
+							<td>guildDiscoveryFinalWarning</td>
+							<td>17</td>
+						</tr>
+						<tr>
+							<td>threadCreated</td>
+							<td>18</td>
+						</tr>
+						<tr>
+							<td>reply</td>
+							<td>19</td>
+						</tr>
+						<tr>
+							<td>applicationCommand</td>
+							<td>20</td>
+						</tr>
+						<tr>
+							<td>threadStarterMessage</td>
+							<td>21</td>
+						</tr>
+						<tr>
+							<td>guildInviteReminder</td>
+							<td>22</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-notificationsetting">
+				<h3 class="name">
+					<a class="anchor" href="#enum-notificationsetting">notificationSetting</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>allMessages</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>onlyMentions</td>
+							<td>1</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-permission">
+				<h3 class="name">
+					<a class="anchor" href="#enum-permission">permission</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>createInstantInvite</td>
+							<td>0x1</td>
+						</tr>
+						<tr>
+							<td>kickMembers</td>
+							<td>0x2</td>
+						</tr>
+						<tr>
+							<td>banMembers</td>
+							<td>0x4</td>
+						</tr>
+						<tr>
+							<td>administrator</td>
+							<td>0x8</td>
+						</tr>
+						<tr>
+							<td>manageChannels</td>
+							<td>0x10</td>
+						</tr>
+						<tr>
+							<td>manageGuild</td>
+							<td>0x20</td>
+						</tr>
+						<tr>
+							<td>addReactions</td>
+							<td>0x40</td>
+						</tr>
+						<tr>
+							<td>viewAuditLog</td>
+							<td>0x80</td>
+						</tr>
+						<tr>
+							<td>prioritySpeaker</td>
+							<td>0x100</td>
+						</tr>
+						<tr>
+							<td>stream</td>
+							<td>0x200</td>
+						</tr>
+						<tr>
+							<td>viewChannel</td>
+							<td>0x400</td>
+						</tr>
+						<tr>
+							<td>sendMessages</td>
+							<td>0x800</td>
+						</tr>
+						<tr>
+							<td>sendTextToSpeech</td>
+							<td>0x1000</td>
+						</tr>
+						<tr>
+							<td>manageMessages</td>
+							<td>0x2000</td>
+						</tr>
+						<tr>
+							<td>embedLinks</td>
+							<td>0x4000</td>
+						</tr>
+						<tr>
+							<td>attachFiles</td>
+							<td>0x8000</td>
+						</tr>
+						<tr>
+							<td>readMessageHistory</td>
+							<td>0x10000</td>
+						</tr>
+						<tr>
+							<td>mentionEveryone</td>
+							<td>0x20000</td>
+						</tr>
+						<tr>
+							<td>useExternalEmojis</td>
+							<td>0x40000</td>
+						</tr>
+						<tr>
+							<td>viewGuildInsights</td>
+							<td>0x80000</td>
+						</tr>
+						<tr>
+							<td>connect</td>
+							<td>0x100000</td>
+						</tr>
+						<tr>
+							<td>speak</td>
+							<td>0x200000</td>
+						</tr>
+						<tr>
+							<td>muteMembers</td>
+							<td>0x400000</td>
+						</tr>
+						<tr>
+							<td>deafenMembers</td>
+							<td>0x800000</td>
+						</tr>
+						<tr>
+							<td>moveMembers</td>
+							<td>0x1000000</td>
+						</tr>
+						<tr>
+							<td>useVoiceActivity</td>
+							<td>0x2000000</td>
+						</tr>
+						<tr>
+							<td>changeNickname</td>
+							<td>0x4000000</td>
+						</tr>
+						<tr>
+							<td>manageNicknames</td>
+							<td>0x8000000</td>
+						</tr>
+						<tr>
+							<td>manageRoles</td>
+							<td>0x10000000</td>
+						</tr>
+						<tr>
+							<td>manageWebhooks</td>
+							<td>0x20000000</td>
+						</tr>
+						<tr>
+							<td>manageEmojis</td>
+							<td>0x40000000</td>
+						</tr>
+						<tr>
+							<td>useSlashCommands</td>
+							<td>0x80000000</td>
+						</tr>
+						<tr>
+							<td>requestToSpeak</td>
+							<td>0x100000000</td>
+						</tr>
+						<tr>
+							<td>manageEvents</td>
+							<td>0x200000000</td>
+						</tr>
+						<tr>
+							<td>manageThreads</td>
+							<td>0x400000000</td>
+						</tr>
+						<tr>
+							<td>usePublicThreads</td>
+							<td>0x800000000</td>
+						</tr>
+						<tr>
+							<td>usePrivateThreads</td>
+							<td>0x1000000000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-permissionoverwritetype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-permissionoverwritetype">permissionOverwriteType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>role</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>member</td>
+							<td>1</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-premiumtier">
+				<h3 class="name">
+					<a class="anchor" href="#enum-premiumtier">premiumTier</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>none</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>tier1</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>tier2</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>tier3</td>
+							<td>3</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-premiumtype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-premiumtype">premiumType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>none</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>nitroClassic</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>nitro</td>
+							<td>2</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-status">
+				<h3 class="name">
+					<a class="anchor" href="#enum-status">status</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>online</td>
+							<td>"online"</td>
+						</tr>
+						<tr>
+							<td>idle</td>
+							<td>"idle"</td>
+						</tr>
+						<tr>
+							<td>doNotDisturb</td>
+							<td>"dnd"</td>
+						</tr>
+						<tr>
+							<td>invisible</td>
+							<td>"invisible"</td>
+						</tr>
+						<tr>
+							<td>offline</td>
+							<td>"offline"</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-teammembershipstate">
+				<h3 class="name">
+					<a class="anchor" href="#enum-teammembershipstate">teamMembershipState</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>invited</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>accepted</td>
+							<td>2</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-timestampstyle">
+				<h3 class="name">
+					<a class="anchor" href="#enum-timestampstyle">timestampStyle</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>shortTime</td>
+							<td>"t"</td>
+						</tr>
+						<tr>
+							<td>longTime</td>
+							<td>"T"</td>
+						</tr>
+						<tr>
+							<td>shortDate</td>
+							<td>"d"</td>
+						</tr>
+						<tr>
+							<td>longDate</td>
+							<td>"D"</td>
+						</tr>
+						<tr>
+							<td>shortDateTime</td>
+							<td>"f"</td>
+						</tr>
+						<tr>
+							<td>longDateTime</td>
+							<td>"F"</td>
+						</tr>
+						<tr>
+							<td>relativeTime</td>
+							<td>"R"</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-userflag">
+				<h3 class="name">
+					<a class="anchor" href="#enum-userflag">userFlag</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>discordEmployee</td>
+							<td>0x1</td>
+						</tr>
+						<tr>
+							<td>discordPartner</td>
+							<td>0x2</td>
+						</tr>
+						<tr>
+							<td>hypesquadEvents</td>
+							<td>0x4</td>
+						</tr>
+						<tr>
+							<td>bugHunterLevel1</td>
+							<td>0x8</td>
+						</tr>
+						<tr>
+							<td>houseBravery</td>
+							<td>0x40</td>
+						</tr>
+						<tr>
+							<td>houseBrilliance</td>
+							<td>0x80</td>
+						</tr>
+						<tr>
+							<td>houseBalance</td>
+							<td>0x100</td>
+						</tr>
+						<tr>
+							<td>earlySupporter</td>
+							<td>0x200</td>
+						</tr>
+						<tr>
+							<td>teamUser</td>
+							<td>0x400</td>
+						</tr>
+						<tr>
+							<td>system</td>
+							<td>0x1000</td>
+						</tr>
+						<tr>
+							<td>bugHunterLevel2</td>
+							<td>0x4000</td>
+						</tr>
+						<tr>
+							<td>verifiedBot</td>
+							<td>0x10000</td>
+						</tr>
+						<tr>
+							<td>verifiedBotDeveloper</td>
+							<td>0x20000</td>
+						</tr>
+						<tr>
+							<td>certifiedModerator</td>
+							<td>0x40000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-verificationlevel">
+				<h3 class="name">
+					<a class="anchor" href="#enum-verificationlevel">verificationLevel</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>none</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>low</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>medium</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>high</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>veryHigh</td>
+							<td>4</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-webhooktype">
+				<h3 class="name">
+					<a class="anchor" href="#enum-webhooktype">webhookType</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>incoming</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>channelFollower</td>
+							<td>2</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="enum" id="enum-whence">
+				<h3 class="name">
+					<a class="anchor" href="#enum-whence">whence</a>
+				</h3>
+				<table class="enumerations">
+					<thead>
+						<th>Name</th>
+						<th>Value</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>around</td>
+							<td>"around"</td>
+						</tr>
+						<tr>
+							<td>before</td>
+							<td>"before"</td>
+						</tr>
+						<tr>
+							<td>after</td>
+							<td>"after"</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

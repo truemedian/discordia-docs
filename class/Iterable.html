@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Discordia: Iterable</title>
+	<link href="/main.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="navigation">
+		<h2>Discordia Documentation</h2>
+		<div class="nav-section">
+			<h3 class="section">Topics</h3>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/Enumerations">Enumerations</a></li>
+				<li><a href="/Resolvable">Resolvable</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Client</h3>
+			<ul>
+				<li><a href="/Client">Client</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Containers</h3>
+			<ul>
+				<li><a href="/Container">Container</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Utilities</h3>
+			<ul>
+				<li><a href="/class/Bitfield">Bitfield</a></li>
+				<li><a href="/class/Color">Color</a></li>
+				<li><a href="/class/Date">Date</a></li>
+				<li><a href="/class/Emitter">Emitter</a>
+					<ul>
+						<li><a href="/class/Clock">Clock</a></li>
+					</ul>
+				</li>
+				<li><a class="current" href="/class/Iterable">Iterable</a></li>
+				<li><a href="/class/Listener">Listener</a></li>
+				<li><a href="/class/Logger">Logger</a></li>
+				<li><a href="/class/Mutex">Mutex</a></li>
+				<li><a href="/class/Stopwatch">Stopwatch</a></li>
+				<li><a href="/class/Time">Time</a></li>
+			</ul>
+		</div>
+		<div class="nav-section">
+			<h3 class="section">Structures</h3>
+			<ul>
+				<li><a href="/class/Activity">Activity</a></li>
+				<li><a href="/class/ActivityAssets">ActivityAssets</a></li>
+				<li><a href="/class/ActivityButton">ActivityButton</a></li>
+				<li><a href="/class/ActivityEmoji">ActivityEmoji</a></li>
+				<li><a href="/class/ActivityParty">ActivityParty</a></li>
+				<li><a href="/class/ActivitySecrets">ActivitySecrets</a></li>
+				<li><a href="/class/ActivityTimestamps">ActivityTimestamps</a></li>
+				<li><a href="/class/Attachment">Attachment</a></li>
+				<li><a href="/class/AuditLogChange">AuditLogChange</a></li>
+				<li><a href="/class/AuditLogOptions">AuditLogOptions</a></li>
+				<li><a href="/class/AuditLogOptions">AuditLogOptions</a></li>
+				<li><a href="/class/CommandChoice">CommandChoice</a></li>
+				<li><a href="/class/CommandOption">CommandOption</a></li>
+				<li><a href="/class/Embed">Embed</a></li>
+				<li><a href="/class/EmbedAuthor">EmbedAuthor</a></li>
+				<li><a href="/class/EmbedField">EmbedField</a></li>
+				<li><a href="/class/EmbedFooter">EmbedFooter</a></li>
+				<li><a href="/class/EmbedImage">EmbedImage</a></li>
+				<li><a href="/class/EmbedProvider">EmbedProvider</a></li>
+				<li><a href="/class/EmbedThumbnail">EmbedThumbnail</a></li>
+				<li><a href="/class/EmbedVideo">EmbedVideo</a></li>
+				<li><a href="/class/GuildCounts">GuildCounts</a></li>
+				<li><a href="/class/InteractionData">InteractionData</a></li>
+				<li><a href="/class/InteractionOption">InteractionOption</a></li>
+				<li><a href="/class/Mention">Mention</a></li>
+				<li><a href="/class/MessageActivity">MessageActivity</a></li>
+				<li><a href="/class/VoiceRegion">VoiceRegion</a></li>
+				<li><a href="/class/VoiceRegion">VoiceRegion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="content">
+		<div id="class">
+			<h1 class="name">Iterable</h1>
+			TODO
+			<h2>Table of Contents</h2>
+			<ul class="table-of-contents">
+				<li>
+					<a href="#methods">Methods</a>
+				</li>
+			</ul>
+			<h2 id="constructor">Constructor</h2>
+			<div class="method">
+				<h3 class="name">
+					<a class="anchor" href="#constructor">Iterable(array, key, sorter)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>array</td>
+							<td>table</td>
+						</tr>
+						<tr>
+							<td>key<abbr class="note" title="Optional">?</div></td>
+							<td>string or number</td>
+						</tr>
+						<tr>
+							<td>sorter<abbr class="note" title="Optional">?</div></td>
+							<td>function</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+			</div>
+			<h2 id="methods">Methods</h2>
+			<h3>Table of Contents</h3>
+			<ul class="sub-table-of-contents">
+				<li>
+					<a href="#method-copy">copy</a>
+				</li>
+				<li>
+					<a href="#method-count">count</a>
+				</li>
+				<li>
+					<a href="#method-filter">filter</a>
+				</li>
+				<li>
+					<a href="#method-find">find</a>
+				</li>
+				<li>
+					<a href="#method-foreach">forEach</a>
+				</li>
+				<li>
+					<a href="#method-get">get</a>
+				</li>
+				<li>
+					<a href="#method-iter">iter</a>
+				</li>
+				<li>
+					<a href="#method-random">random</a>
+				</li>
+				<li>
+					<a href="#method-select">select</a>
+				</li>
+				<li>
+					<a href="#method-sort">sort</a>
+				</li>
+				<li>
+					<a href="#method-toarray">toArray</a>
+				</li>
+				<li>
+					<a href="#method-totable">toTable</a>
+				</li>
+				<li class="filler"></li>
+			</ul>
+			<div class="method" id="method-copy">
+				<h3 class="name">
+					<a class="anchor" href="#method-copy">copy()</a>
+				</h3>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong><a href="/class/Iterable">Iterable</a>
+				</div>
+			</div>
+			<div class="method" id="method-count">
+				<h3 class="name">
+					<a class="anchor" href="#method-count">count(fn)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>fn</td>
+							<td>function</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>number
+				</div>
+			</div>
+			<div class="method" id="method-filter">
+				<h3 class="name">
+					<a class="anchor" href="#method-filter">filter(fn)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>fn</td>
+							<td>function</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong><a href="/class/Iterable">Iterable</a>
+				</div>
+			</div>
+			<div class="method" id="method-find">
+				<h3 class="name">
+					<a class="anchor" href="#method-find">find(fn)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>fn</td>
+							<td>function</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>any
+				</div>
+			</div>
+			<div class="method" id="method-foreach">
+				<h3 class="name">
+					<a class="anchor" href="#method-foreach">forEach(fn)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>fn</td>
+							<td>function</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>nil
+				</div>
+			</div>
+			<div class="method" id="method-get">
+				<h3 class="name">
+					<a class="anchor" href="#method-get">get(key)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>key</td>
+							<td>string or number</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>
+				</div>
+			</div>
+			<div class="method" id="method-iter">
+				<h3 class="name">
+					<a class="anchor" href="#method-iter">iter()</a>
+				</h3>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong><span class="annotated">
+						function
+						<p>iter</p></span>
+					
+				</div>
+			</div>
+			<div class="method" id="method-random">
+				<h3 class="name">
+					<a class="anchor" href="#method-random">random()</a>
+				</h3>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>any
+				</div>
+			</div>
+			<div class="method" id="method-select">
+				<h3 class="name">
+					<a class="anchor" href="#method-select">select(...)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>...</td>
+							<td>any</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong><span class="annotated">
+						table
+						<p>An array of table[any] values.</p></span>
+					
+				</div>
+			</div>
+			<div class="method" id="method-sort">
+				<h3 class="name">
+					<a class="anchor" href="#method-sort">sort(sorter)</a>
+				</h3>
+				<table class="parameters">
+					<thead>
+						<th>Parameter</th>
+						<th>Type</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>sorter</td>
+							<td>function</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>nil
+				</div>
+			</div>
+			<div class="method" id="method-toarray">
+				<h3 class="name">
+					<a class="anchor" href="#method-toarray">toArray()</a>
+				</h3>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>table
+				</div>
+			</div>
+			<div class="method" id="method-totable">
+				<h3 class="name">
+					<a class="anchor" href="#method-totable">toTable()</a>
+				</h3>
+				<div class="description">
+					TODO
+				</div>
+				<div class="returns">
+					<strong>Returns: </strong>table
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
